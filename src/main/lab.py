@@ -30,9 +30,10 @@ class Lab:
         Returns:
             str: The contents of the file.
         """
+
         try:
             with open(filename, 'r') as file:
-                return 0
+                return file.read()
         except FileNotFoundError:
             print(f"File '{filename}' not found.")
             return None
